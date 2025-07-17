@@ -7,6 +7,9 @@ load_dotenv(dotenv_path=".env")
 
 import os
 print("DEBUG: DATABASE_URL =", os.getenv("DATABASE_URL"))
+print("DEBUG: SECRET_KEY =", repr(os.getenv("SECRET_KEY")))
+print("DEBUG: ALGORITHM =", repr(os.getenv("ALGORITHM")))
+print("DEBUG: ACCESS_TOKEN_EXPIRE_MINUTES =", repr(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES")))
 
 from app.api.routes import (
     auth,

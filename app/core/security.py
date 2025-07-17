@@ -4,6 +4,9 @@ from typing import Any, Optional
 from jose import jwt, JWTError
 from passlib.context import CryptContext
 
+from dotenv import load_dotenv
+load_dotenv()
+
 _raw_secret_key = os.getenv("SECRET_KEY")
 if _raw_secret_key is None:
     raise ValueError("SECRET_KEY environment variable is not set")

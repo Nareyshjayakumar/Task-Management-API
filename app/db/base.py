@@ -1,4 +1,4 @@
-from app.db.models.user import User #type: ignore
-from app.db.models.project import Project #type: ignore
-from app.db.models.task import Task #type: ignore
-from app.db.models.task_comment import TaskComment #type: ignore
+from app.db.base_class import Base
+
+# Import all models so Alembic can detect them
+from app.db.models import user, task, project, task_comment
